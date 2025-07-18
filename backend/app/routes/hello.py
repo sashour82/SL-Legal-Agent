@@ -1,7 +1,7 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint
 
-hello_bp = Blueprint('hello_bp', __name__, url_prefix='/api')
+hello_bp = Blueprint('hello', __name__, url_prefix="/api")
 
-@hello_bp.route("/")
+@hello_bp.route('/hello')
 def hello():
-    return jsonify({"message": "Hello from Flask Blueprint"})
+    return {"message": "Hello from Flask!"}
